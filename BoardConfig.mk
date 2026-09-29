@@ -22,3 +22,6 @@ TW_DEVICE_VERSION := X6880-rayaann
 # USB-OTG: exFAT/NTFS support (flashdisk)
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
+
+# Keymaster (required by OrangeFox when TW_FORCE_KEYMASTER_VER=true in common)
+OF_DEFAULT_KEYMASTER_VERSION := 4.1
