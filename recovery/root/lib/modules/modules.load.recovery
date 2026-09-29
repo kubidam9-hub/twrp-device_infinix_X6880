@@ -112,6 +112,9 @@ mcDrvModule.ko
 isee.ko
 industrialio-triggered-buffer.ko
 kfifo_buf.ko
+mt6375-auxadc.ko
+mt6375-adc.ko
+mt6375.ko
 mt6577_auxadc.ko
 adapter_class.ko
 charger_class.ko
