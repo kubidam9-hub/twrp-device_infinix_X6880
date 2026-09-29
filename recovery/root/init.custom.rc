@@ -1,0 +1,11 @@
+on init
+    # Fix USB-OTG tidak ada daya di recovery (Transsion VBUS enable)
+    # Stock ROM melakukan ini di init.project.rc / init.mt6789.rc
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
+
+on boot
+    #Added Manual For Trustonic
+    mkdir /mnt/vendor/persist
+    mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
+    # Pastikan VBUS OTG tetap hidup setelah boot
+    write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1

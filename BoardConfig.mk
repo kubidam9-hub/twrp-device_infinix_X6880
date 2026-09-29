@@ -18,3 +18,7 @@ TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-X6880
 
 # TWRP Configs
 TW_DEVICE_VERSION := X6880_CRom_KimelaZPrjkt
+
+# USB-OTG: exFAT/NTFS support (flashdisk)
+TW_INCLUDE_FUSE_EXFAT := true
+TW_INCLUDE_FUSE_NTFS := true
