@@ -9,3 +9,7 @@ on boot
     mount ext4 /dev/block/by-name/persist /mnt/vendor/persist rw
     # Pastikan VBUS OTG tetap hidup setelah boot
     write /sys/devices/platform/odm/odm:tran_battery/OTG_CTL 1
+    # Re-bind gadget setelah semua modul USB ke-load (fix race ADB hilang)
+    write /config/usb_gadget/g1/UDC none
+    write /config/usb_gadget/g1/UDC musb-hdrc
+    restart adbd
